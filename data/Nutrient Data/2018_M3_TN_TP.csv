@@ -1,0 +1,37 @@
+﻿Watershed,Site Type,Site,Sample Date & Time,Temperature Upon Receipt (°C),TN_mg_per_L,TP_mg_per_L
+Kettle,Conventional,Taylor #1,10-May-18,19,9.3,0.09
+Kettle,Conventional,Taylor #2,10-May-18,19,10.8,0.078
+Kettle,Conventional,Taylor #3,10-May-18,19,10.9,0.09
+Kettle,Conventional,Taylor #1,07-Jun-18,19,8.8,0.061
+Kettle,Conventional,Taylor #2,07-Jun-18,19,8.6,0.083
+Kettle,Conventional,Taylor #3,07-Jun-18,19,8.8,0.057
+Kettle,Conventional,Taylor #1,05-Jul-18,19,10.4,0.308
+Kettle,Conventional,Taylor #2,05-Jul-18,19,10.9,0.167
+Kettle,Conventional,Taylor #3,05-Jul-18,19,10.7,0.171
+Kettle,Conventional,Taylor #1,02-Aug-18,19,1.2,0.229
+Kettle,Conventional,Taylor #2,02-Aug-18,19,1.6,0.375
+Kettle,Conventional,Taylor #3,02-Aug-18,19,2.3,0.193
+Kettle,Mid-Impact,Perl 4 #1,10-May-18,19,7.1,0.066
+Kettle,Mid-Impact,Perl 4 #2,10-May-18,19,7.3,0.057
+Kettle,Mid-Impact,Perl 4 #3,10-May-18,19,7.6,0.023
+Kettle,Mid-Impact,Perl 4 #1,07-Jun-18,19,0.9,0.043
+Kettle,Mid-Impact,Perl 4 #2,07-Jun-18,19,0.9,0.047
+Kettle,Mid-Impact,Perl 4 #3,07-Jun-18,19,0.8,0.064
+Kettle,Mid-Impact,Perl 4 #1,05-Jul-18,19,0.6,0.046
+Kettle,Mid-Impact,Perl 4 #2,05-Jul-18,19,0.9,0.066
+Kettle,Mid-Impact,Perl 4 #3,05-Jul-18,19,0.6,0.045
+Kettle,Mid-Impact,Perl 4 #1,02-Aug-18,19,1.2,0.047
+Kettle,Mid-Impact,Perl 4 #2,02-Aug-18,19,1.1,0.033
+Kettle,Mid-Impact,Perl 4 #3,02-Aug-18,19,1.1,0.068
+Kettle,CA,Hawkcliff #1,10-May-18,19,1.2,0.036
+Kettle,CA,Hawkcliff #2,10-May-18,19,1.5,0.032
+Kettle,CA,Hawkcliff #3,10-May-18,19,1.6,0.028
+Kettle,CA,Hawkcliff #1,07-Jun-18,19,1.4,0.066
+Kettle,CA,Hawkcliff #2,07-Jun-18,19,1.3,0.078
+Kettle,CA,Hawkcliff #3,07-Jun-18,19,1.4,0.12
+Kettle,CA,Hawkcliff #1,05-Jul-18,19,1.1,0.131
+Kettle,CA,Hawkcliff #2,05-Jul-18,19,1.1,0.137
+Kettle,CA,Hawkcliff #3,05-Jul-18,19,1.1,0.157
+Kettle,CA,Hawkcliff #1,02-Aug-18,19,1,0.065
+Kettle,CA,Hawkcliff #2,02-Aug-18,19,1,0.062
+Kettle,CA,Hawkcliff #3,02-Aug-18,19,1,0.072

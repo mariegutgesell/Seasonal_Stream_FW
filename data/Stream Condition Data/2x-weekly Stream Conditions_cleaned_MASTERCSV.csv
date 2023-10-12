@@ -1,0 +1,158 @@
+﻿Sample # ID,Name ,Date,Time,Site_Code,Weather,Temperature,Flow,Turbidity,Foliage_density_per,Foliage_density_avg,Canopy_cover_per,Canopy_Cover_avg,Habitat,Water_depth_cm,Hydraulic_head_cm,Wetted_width_cm,Transect_distance_m,Sample_time_min,Dominant_substrate,2nd_Dominant_substrate ,Woody_Debris_substrate,Woody_Debris_floating,Decaying_OM_substrate,Decaying_OM_floating,Macrophytes,Algae ,Macrophyte_Emergent,Macrophyte_rooted_floating,Macrophyte_submerged,Macrophyte_free_floating,Algae_floating,Algae_filaments,Algae_attached,Algae_slim_crusts,Notes
+2,Hawk Cliff,03/05/2018,,HC,cloudy,medium,medium ,moderate ,75-100,87.5,0-24,12,riffle,13,5,,1,1.5,clay,silt,1,0,1,0,E (1) ,N/A,1,0,0,0,0,0,0,0,
+,Hawk Cliff,07/05/2018,11:00,HC,sunny; still,hot,slow,clear,0-24,12,0-24,12,"sand, silt, submerged roots",30,0.25,,,,,,,,,,,,,,,,,,,,
+,Hawk Cliff,10/05/2018,12:00,HC,cloudy; breezy,,medium ,clear,0-24,12,0-24,12,narrow stream/ pool and riffle,21,0.5,110,10,3,sand/ silt,gravel,1,1,1,0,E (present); RF (present),N/A,1,1,0,0,0,0,0,0,
+,Hawk Cliff,14/05/2018,11:05,HC,cloudy; still,medium,medium ,clear,0-24,12,0-24,12,,,1,125,3,3,clay/ silt,sand,1,0,1,0,E (present); RF (present),,1,1,0,0,0,0,0,0,ww/ hh/ depth estimated
+,Hawk Cliff,17/05/2018,10:45,HC,sunny; still,,,clear,0-24,12,25-49,37,sandy with rocks,12,1,115,,3,sandy silt,rock,0,1,1,1,E(1),AA(2); SC(1),1,0,0,0,0,0,2,1,
+,Hawk Cliff,21/05/2018,10:36,HC,sunny; still,medium,medium,moderate ,25-49,37,0-24,12,,13.9,0.5,141,,3,sand,gravel,0.5,1,0,0,E(1),F (1); AA(1),1,0,0,0,0,1,1,0,"PT 1+2 had spiders, PT-2 had ~8 flies caught in web on chicken wire"
+,Hawk Cliff,24/05/2018,14:42,HC,sunny; breezy,medium,medium,clear,50-74,62,,,,24,0.2,129,,,,,,,,,E(1),F(1); SC(1),1,0,0,0,0,1,0,1,
+,Hawk Cliff,28/05/2018,11:00,HC,sunny; still,hot,medium,clear,25-49,37,0-24,12,,19.5,0.25,141,,,clay,silt,2,0,1,0,E(1),F(1); AA(1); SC(1),1,0,0,0,0,1,1,1,
+,Hawk Cliff,31/05/2018,10:41,HC,cloudy; still,hot,medium,moderate ,50-74,62,50-74,62,,10.4,3,75,,,sand,silt,1,1,0,0,,SC(1),0,0,0,0,0,0,0,1,
+,Hawk Cliff,04/06/2018,11:15,HC,sunny; breezy,medium,slow,moderate ,50-74,62,25-49,37,,20,0,143,,3,silt,clay,2,1,2,0,E(1),,1,0,0,0,0,0,0,0,
+,Hawk Cliff,11/06/2018,11:23,HC,sunny; breezy,,medium,moderate ,75-100,87.5,50-74,62,,14,1.2,103,3,,2 silt,3 sand,1,0,1,0,E(1),F(1),1,0,0,0,0,1,0,0,"Woody debris circled for dom OM, emergent circled for dom macrophytes, filaments for algae"
+,Hawk Cliff,14/06/2018,11:00,HC,sunny; breezy,,slow,murky,50-74,62,0-24,12,,60,0.5,120,,3,clay,sand,1,0,2,0,,AA(1),0,0,0,0,0,0,1,0,
+,Hawk Cliff,18/06/2018,11:00,HC,sunny; still,hot,medium,murky,50-74,62,50-74,62,,13,2.5,80,,,2 silt,1 clay,1,0,1,0,0,0,0,0,0,0,0,0,0,0,
+,Hawk Cliff,21/06/2018,10:21,HC,sunny; still,,slow,moderate,25-49,37,0-24,12,,26,0.5,146,,,silt,mud,1,1,1,0,E(1),F(1); AA(1); SC(1),1,0,0,0,0,1,1,1,
+,Hawk Cliff,25/06/2018,11:30,HC,sunny; still,,fast,moderate,25-49,37,0-24,12,,27,0.5,118,,,silt,mud,1,0,1,0,E(1) ,F(1); AA(1),1,0,0,0,0,1,1,0,
+,Hawk Cliff,28/06/2018,11:30,HC,sunny; breezy,,fast,moderate,25-49,37,0-24,12,,95,1.5,100,,1,gravel,sand,1,0,1,0,RF(1),F(1); AA(1); SC(1),0,1,0,0,0,1,1,1,
+,Hawk Cliff,02/07/2018,12:15,HC,sunny; still,hot,slow,murky,0-24,12,0-24,12,,9,0.3,86,3,3,sand,silt,1,0,1,0,0,F(1); AA(1); SC(1),0,0,0,0,0,1,1,1,
+,Hawk Cliff,05/07/2018,,HC,sunny; still,hot ,slow,moderate,75-100,87.5,25-49,37,,10,0.5,104,3,3,sand,gravel,1,1,1,1,E(1);FF(1),F(1);AA(1),1,0,0,1,0,1,1,0,
+,Hawk Cliff,09/07/2018,11:15,HC,sunny; breezy,,medium,moderate,50-74,62,25-49,37,,10,2,85,3,3,clay,gravel,1,1,1,1,0,F(1),0,0,0,0,0,1,0,0,
+,Hawk Cliff,12/07/2018,11:30,HC,cloudy,medium ,slow ,murky,25-49 ,37,0-24,12,,7.5,4,- ,3,3,clay ,silt ,2,2,0,0,E(1),0,1,0,0,0,0,0,0,0,
+,Hawk Cliff,23/07/2018,10:30,HC,sunny; still,hot,slow,moderate,25-49,37,25-49,37,,9,0.1,183,3,3,clay,silt,1,1,0,0,0,SC(1),0,0,0,0,0,0,0,1,
+,Hawk Cliff,26/07/2018,12:10,HC,sunny; breezy ,medium,slow,moderate ,25-49,37,0-24,12,,,,,,,silt,clay ,1,1,0,0,0,AA(1); SC(1),0,0,0,0,0,0,1,1,"All PTs flooded, not currently overflowing. ET 3 ripped and no water under it (dry), jar was full of sediment and water and brought back to lab"
+,Hawk Cliff,06/08/2018,11:30,HC,sunny; breezy ,hot ,medium ,moderate ,75-100,87.5,50-74,62,,5.3,2.5,84,3,3,gravel,silt ,1,0,2,0,0,F(1); AA(2); SC(2) ,0,0,0,0,0,1,2,2,
+,Hawk Cliff,09/08/2018,12:45,HC,sunny; still,hot ,medium ,murky ,75-100,87.5,25-49,37,,8.5,5,110,3,3,gravel ,sand ,2,2,2,2,RF(1),AA(1); SC(1) ,0,1,0,0,0,0,1,1,
+,Hawk Cliff,13/08/2018,12:00,HC,sunny; still,hot ,slow ,moderate ,25-49,37,25-49,37,,7,2.5,70,3,3,gravel ,silt,1,0,1,0,S(1),AA(1); SC(1) ,0,0,1,0,0,0,1,1,
+,Hawk Cliff,23/08/2018,10:00,HC,sunny;still,hot ,medium,moderate ,75-100,87.5,50-74,62,,18,0.4,67,3,3,sand ,silt ,1,1,0,0,0,F(1); AA(1),0,0,0,0,0,1,1,0,PT-2 slightly flooded but still collected sample; animal ate pool noodle of ET-1 and replaced in field 
+,Hawk Cliff,10/09/2018,,HC,cloudy; breezy,cold,,,25-49,37,50-74,62,,45,0.2,,3,3,clay,silt ,,,,,,,,,,,,,,,
+,Hawk Cliff,13/09/2018,15:15,HC,sunny; breezy,N/A,slow ,clear,50-74,62,50-74,62,,12,0.4,80,3,3,sand ,clay,0,0,1,1,0,AA(1); SC(1),0,0,0,0,0,0,1,1,
+,Hawk Cliff,20/09/2018,11:10,HC,cloudy; still,N/A,fast,clear,25-49,37,50-74,62,,7,2,81,3,3,silt ,gravel,1,0,2,1,RF(1); S(1),F(1); AA(1); SC(1),0,1,1,0,0,1,1,1,
+,Hawk Cliff,27/09/2018,8:36,HC,cloudy; still,cool,medium,clear,75-100,87.5,50-74,62,,15,0.5,70,3,3,sand ,cobble,1,1,1,1,,,0,0,0,0,0,1,1,0,
+,Hawk Cliff,01/10/2018,10:30,HC,cloudy; breezy,cold,fast,murky,50-74,62,25-49,37,,23,1.5,96,3,3,silt ,sand ,0,1,1,1,,,2,2,1,0,0,0,1,0,
+,Hawk Cliff,08/10/2018,11:30,HC,cloudy; still,medium,fast,clear,25-49,37,50-74,62,,15,2,123,3,3,gravel,sand ,0,0,0,0,0,F(1); AA(1),0,0,0,0,0,1,1,0,
+,Hawk Cliff,11/10/2018,,HC,cloudy; windy,cold,fast,clear,25-49,37,25-49,37,,10,113,,3,,gravel,sand ,1,0,0,0,,,0,0,0,0,0,0,0,1,
+,Hawk Cliff,15/10/2018,14:30,HC,cloudy; windy ,cold,,,50-74,62,0-24,12,,7,1.5,80,3,3,gravel,clay,1,0,0,1,,,0,0,0,0,0,0,1,1,
+,Hawk Cliff,18/10/2018,,HC,cloudy; breezy,,fast,clear,25-49,37,25-49,37,,12,0.7,133,3,,silt,sand,1,0,1,0,,,0,0,0,0,0,0,0,1,
+,Hawk Cliff,22/10/2018,10:48,HC,sunny; breezy,cold,medium,clear,0-24,12,0-24,12,,21.5,,115,3,3,silt,gravel,1,0,2,0,,,0,0,0,0,0,0,0,0,
+,Hawk Cliff,25/10/2018,11:30,HC,cloudy; still,cold,fast,clear,25-49,37,0-24,12,,15,0.6,65,3,,gravel,sand,1,0,1,0,,,0,0,0,0,0,0,0,0,
+,Hawk Cliff,29/10/2018,10:15,HC,breezy,cold,fast,murky,25-49,37,0-24,12,,25,3,113,,3,sand,silt,1,2,2,2,,,1,2,0,0,0,0,1,1,
+,Hawk Cliff,01/11/2018,14:30,HC,cloudy; rainy,cold,fast,murky,50-74,62,50-74,62,,30,2,134,3,,gravel,cobble,0,2,0,0,,,0,0,0,0,0,0,0,0,
+,Hawk Cliff,05/11/2018,10:30,HC,cloudy; breezy,cold,fast,murky,0-24,12,0-24,12,,25,2.25,119,,3,silt,gravel,1,1,2,2,,,0,1,1,0,0,0,1,0,
+,Hawk Cliff ,16/07/2018,13:45,HC,sunny; breezy,hot ,medium ,moderate,50-74,62,75-100,87.5,,16,0.5,112,3,3,silt ,gravel,1,1,0,0,E(1),F(1); AA(1); SC(1),1,0,0,0,0,1,1,1,
+,Hawk cliff ,19/07/2018,10:00,HC,sunny,hot ,medium ,murky,50-74,62,75-100,87.5,,12,1.1,57,3,3,clay,silt ,,,,,,,,,,,,,,,
+,Hawk Cliff ,30/07/2018,23:30,HC,cloudy; still ,medium ,fast ,clear,50-74,62,75-100,87.5,,8,0.2,73,3,3,silt,clay ,0,0,0,0,0,F(1),0,0,0,0,0,1,0,0,
+,Hawk Cliff ,02/08/2018,14:30,HC,sunny; still,hot ,fast ,clear,25-49,37,25-49,37,,9,1,60,3,3,gravel ,sand ,1,1,1,1,RF(1); S(1),AA(1); SC(1) ,0,1,1,0,0,0,1,1,
+,Hawk Cliff ,16/08/2018,12:48,HC,cloudy; breezy ,,fast ,murky ,25-49,37,0-24,12,,17,0.15,128,3,3,clay ,sand ,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
+,Hawk Cliff ,20/08/2018,18:50,HC,cloudy; still,medium ,medium ,moderate ,75-100,87.5,50-74 ,62,,,,,,,,,,,,,,,,,,,,,,,Data sheet is not fully filled out 
+,Hawk Cliff ,27/08/2018 ,10:00,HC,cloudy; still,medium,N/A,murky ,75-100,87,50-74,62,,21.7,4,148,3,3,gravel ,clay,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"high water, very turbid, PT-2 and PT-1 flooded and no samples were collected, ET-3 was no longer on surface of water, still collected, ET-1 flipped and taken down "
+,Hawk Cliff ,30/08/2018,11:15,HC,sunny; breezy ,N/A,fast,clear,25-49,37,50-74,62,,8,0.5,92,3,3,silt ,gravel,1,0,0,0,0,F(1); AA(1); SC(1),0,0,0,0,0,1,1,1,
+,Hawk Cliff ,03/09/2018,10:30,HC,sunny; still,hot ,medium,clear,50-74,62,25-49,37,,16,0.3,87,3,3,silt ,clay,1,1,1,1,E(1); RF(2); S(1),F(1); AA(1); SC(1),1,2,1,0,0,1,1,1,
+,Hawk Cliff ,06/09/2018,9:20,HC,cloudy; breezy ,medium ,medium,moderate ,25-49,37,50-74,62,,6.5,1,97,3,3,gravel ,silt ,1,1,1,0,RF(1); S(1),F(1); AA(1); SC(1),0,1,1,0,0,1,1,1,
+,Hawk Cliff ,17/09/2018,10:30,HC,sunny; still,N/A,slow ,murky ,75-100,87.5,25-49,37,,14,0.15,86,3,3,silt ,sand ,1,1,1,1,E(1); RF(1),0,1,1,0,0,0,0,0,0,
+,Hawk Cliff ,24/09/2018,10:30,HC,cloudy,cold,medium,moderate ,50-74,62,25-49,37,,9,1.5,85,3,3,gravel,clay,0,0,1,0,E(1); RF(1),0,1,1,0,0,0,0,0,0,
+,Hawk Cliff ,04/10/2018,11:30,HC,cloudy; windy ,N/A,fast,moderate ,50-74,62,50-74,62,,8,3,95,3,3,sand ,gravel,1,1,0,0,0,F(1); AA(1); SC(1) ,0,0,0,0,0,1,1,1,
+,Perl 4,03/05/2018,,EP4,cloudy ,medium,slow,clear,0-24,12,0-24,12,gravel;solid pebbles,34.5,0,150,1,,sand,gravel/cobble,1,0,0,0,S (2),N/A,,,,,,,,,
+,Perl 4,07/05/2018,13:10,EP4,sunny; breezy,medium ,medium ,murky ,0-24,12,0-24,12,"rockier bottom, sand, gravel",55.5,0,212,3,,gravel;rock,sand,0,1,1,1,E(1);RF(1),N/A,,,,,,,,,
+,Perl 4,10/05/2018,13:45,EP4,cloudy; still,,slow,clear,0-24,12,0-24,12,,31,0.25,158,10.5,3,sand/ gravel,silt,,present,present,present,RF (present),N/A,,,,,,,,,
+,Perl 4,14/ 05/2018,,EP4,cloudy; still,,slow,murky ,0-24,12,25-49,37,,35,0.25,100,,3,clay/silt,gravel,present,present,present,present,E (present); RF (present),,1,1,0,0,0,0,0,0,ww/ hh/ depth estimated; present = 1 for algae/macrophyte
+,Perl 4,17/05/2018,12:10,EP4,sunny; still,,slow,moderate ,25-49,37,0-24,12,,41,0,210,,1,silt/sand,mud rocks/gravel,2,1,1,0,0,0,0,0,0,0,0,0,0,0,
+,Perl 4,21/05/2018,13:10,EP4,sunny; still,hot,slow,moderate ,25-49,37,0-24,12,,32.5,0,140,,3,sand,gravel,0,1,1,0,0,0,0,0,0,0,0,0,0,0,
+,Perl 4,24/05/2018,13:06,EP4,sunny; still,hot,slow,clear,75-100,87.5,25-49,37,,21.3,0.23,141,,,,,2,2,1,1,E(2); S(2); FF(2),,2,0,0,0,0,0,0,1,
+,Perl 4,28/05/2018,13:00,EP4,sunny; still,hot,slow,clear,25-49,37,25-49,37,,16,0,150,1.5,3,"sand, silt",silt,0,0,1,1,,,0,0,0,0,0,0,0,0,"ET1 pool noodles ripped up; PT1 tipped to corner but not overflowing currently, PT 2 tipped to side and overflowing"
+,Perl 4,31/05/2018,12:36,EP4,sunny; breezy,hot,slow,murky ,0-24,12,0-24,12,,13.8,0.9,96.3,,,sand,silt,2,2,2,2,,FA(1):F(1); AA(1),,,,,,,,,ET trap 1 went down on 28/05/18 so only ET 2+3 were used
+,Perl 4,04/06/2018,12:33,EP4,cloudy; breezy,,slow,clear,50-74,62,25-49,37,,15,0,100,,3,rock,mud,1,0,1,0,E(1),,,,,,,,,,
+,Perl 4,11/06/2018,13:33,EP4,sunny; breezy,hot,slow,moderate ,25-49,37,25-49,37,,29.5,0,113,3,3,2 silt,3 sand,1,0,1,0,E(1),AA(1); SC(1),1,0,0,0,0,0,1,1,"Emergent circled for dom macrophytes, slimes or crusts for algae"
+,Perl 4,14/06/2018,12:15,EP4,sunny; breezy,hot,slow,moderate,25-49,37,25-49,37,,12,0.5,145,,3,cobble,sand,1,0,2,1,S(1),AA(1),0,0,1,0,0,0,1,0,Level logger was floating- reset at 12:31
+,Perl 4,18/06/2018,12:39,EP4,sunny; cloudy,,slow,moderate,25-49,37,0-24,12,,10,0,150,3,,silt,gravel,1,0,0,0,,F(1); SC(1),0,0,0,0,0,1,0,1,
+,Perl 4,21/06/2018,12:05,EP4,sunny; still,,slow,murky,25-49,37,0-24,12,,,0,153,1,3,mud,rocks,1,2,1,1,,FA(1); F(1); AA(1); SC(1),0,0,0,0,1,1,1,1,
+,Perl 4,25/06/2018,12:34,EP4,sunny; still,,slow,clear,25-49,37,25-49,37,,36,0,246,,,sand,mud,1,0,1,0,,F(1); AA(2); SC(1),0,0,0,0,0,1,2,1,
+,Perl 4,02/07/2018,14:00,EP4,sunny; raining? ,hot,slow,murky,25-49,37,25-49,37,,13,0,162,3,3,gravel,sand ,1,0,2,0,0,F(2); AA(2); SC(2),0,0,0,0,0,2,2,2,
+,Perl 4,05/07/2018,,EP4,sunny; still,hot ,medium,moderate,25-49,37,0-24,12,,12,0.5,145,3,3,silt,gravel,1,1,1,1,0,SC(1),0,0,0,0,0,0,0,1,
+,Perl 4,09/07/2018,12:30,EP4,sunny,,slow,clear,25-49,37,25-49,37,,20,0,90,,3,silt,gravel,1,1,1,1,E(1);FF(1);S(1),FA(1); F(1); AA(2); SC(2),1,1,1,0,1,1,2,2,
+,Perl 4,12/07/2018,14:30,EP4,sunny,medium ,slow ,clear,75-100 ,87.5,75-100,62,,21.5,0,110,3,3,silt,clay ,1,1,1,1,0,FA(2); F(2); AA(2); SC(2),0,0,0,0,2,2,2,2,
+,Perl 4,16/07/2018,15:30,EP4,sunny;still,hot ,slow ,murky ,25-49,37,25-49 ,37,,5.5,0.5,65,3,3,gravel,sand ,1,1,0,0,E(1),SC(1) ,1,0,0,0,0,0,0,1,
+,Perl 4,23/07/2018,12:00,EP4,sunny;breezy,hot,slow,moderate ,0-24,12,0-24,12,,8,0.1,126,3,3,gravel,silt ,1,2,0,0,S(1),F(1);AA(1);SC(2),0,0,1,0,0,1,1,2,
+,Perl 4,30/07/2018,12:30,EP4,cloudy; still,medium,N/A,N/A,0-24,12,0-24,12,,8,0.2,125,3,3,gravel,sand,1,1,1,0,RF(1); S(1),F(1); AA(1); SC(1),0,1,1,0,0,1,1,1,Emergent tent was replaced 
+,Perl 4,13/08/2018,11:10,EP4,sunny; still,hot ,N/A,N/A,75-100,87.5,50-74,62,,4,0,75,3,3,gravel,sand ,1,0,1,0,0,F(1); AA(1); SC(1) ,0,0,0,0,0,1,1,1,"PT-2 flipped, ET-1 replaced, PT-3 replaced, Malaise trap very ripped at front and taped temporarily "
+,Perl 4,23/08/2018,12:40,EP4,sunny; still,,slow ,clear,50-74,62,50-74,62,,17,0.1,124,3,3,gravel ,sand ,0,0,1,0,E(1),AA(1),1,0,0,0,0,0,1,0,PT-3 flooded and submerged; PT-2 slightly flooded but still collected sample
+,Perl 4,27/08/2018,11:15,EP4,N/A,N/A,fast ,murky ,75-100,87.5,50-74,62,,40,0,200,3,3,gravel ,silt/clay ,0,1,0,1,0,1,0,0,0,0,0,0,0,0,"ET-1 had a whole up to the top of the net, repaired with zip ties and collected, PT-1 was flooded "
+,Perl 4,30/08/2018 ,12:30,EP4,sunny; breezy ,N/A,medium ,clear ,50-74,62,25-49,37,,10,0.3,70,3,3,gravel ,sand ,1,1,1,1,0,F(1); F(1);AA(1); SC(1),0,0,0,0,1,1,1,1,
+,Perl 4,03/09/2018,10:30,EP4,sunny; still,hot,medium,clear,50-74,62,25-49,37,,16,0.3,87,,,silt,clay,1,1,1,1,,,1,2,1,0,0,1,1,1,
+,Perl 4,06/09/2018,N/A ,EP4,cloudy; breezy ,medium,medium ,clear,50-74,62,25-49,37,,14.5,0.3,117,3,3,sand ,gravel,1,1,2,1,RF(2); S(2); FF(1),FA(1); F(2); AA(2); SC(2),0,2,2,1,1,2,2,2,
+,Perl 4,10/09/2018,,EP4,cloudy; breezy,medium,,,,,,,,12,0.1,,,,,,,,,,,,,,,,,,,,not much information on the sheet for this site
+,Perl 4,13/09/2018,,EP4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Perl 4,27/09/2018,10:11,EP4,cloudy; still,cold,slow,clear,25-49,37,50-74,62,,7,0.1,65,1.5,3,clay,cobble,0,0,1,0,,,0,0,0,0,0,1,1,0,
+,Perl 4,04/10/2018,13:30,EP4,cloudy; windy,medium ,medium,moderate ,50-74,62,25-49,37,,9.5,0.3,128,3,3,sand ,gravel ,1,0,1,0,0,F(1),0,0,0,0,0,1,0,0,
+,Perl 4,11/10/2018,,EP4,cloudy; windy,cold,medium,clear,25-49,37,25-49,37,,24,1,100,3,,sand ,gravel,1,0,1,1,,,0,0,1,0,1,1,0,0,
+,Perl 4,15/10/2018,16:30,EP4,sunny; cloudy; breezy,cold,medium,clear,75-100,87.5,25-49,37,,7.2,1,100,3,3,gravel,clay,0,0,1,1,,,0,0,0,0,0,1,0,1,
+,Perl 4,18/10/2018,13:00,EP4,still,medium,medium,clear,25-49,37,50-74,62,,12,0.5,115,3,,cobble,sand ,1,0,1,0,,,0,1,1,0,0,0,1,1,
+,Perl 4,22/10/2018,11:45,EP4,sunny; breezy,cold,slow,clear,0-24,12,0-24,12,,25,0,220,3,3,clay,silt,2,1,2,1,,,0,0,0,0,0,1,1,0,
+,Perl 4,25/10/2018,12:00,EP4,sunny; still,cold,medium,clear,0-24,12,0-24,12,,10,0.3,120,3,,silt,sand,2,1,2,0,,,0,0,0,0,0,0,0,1,
+,Perl 4,29/10/2018,11:30,EP4,cloudy; still,cold,medium,murky,25-49,37,0-24,12,,15,2,175,,3,silt,sand,0,1,2,2,,,1,2,0,0,0,0,1,1,
+,Perl 4,01/11/2018,12:00,EP4,cloudy; still; rainy,cold,fast,murky,50-74,62,25-49,37,,60,3,145,3,,gravel,cobble,1,0,1,1,,,1,1,1,1,0,1,1,0,
+,Perl 4,05/11/2018,12:30,EP4,cloudy; breezy,cold,fast,murky,0-24,12,0-24,12,,42,2.5,172,,3,sand,gravel,1,1,2,2,,,1,1,0,0,0,0,1,0,
+,Perl 4 ,19/07/2018,11:55,EP4,sunny,medium ,slow,murky ,75-100,87.5,50-74,62,,15.2,0,153,3,3,gravel,sand ,,,,,,,,,,,,,,,
+,Perl 4 ,26/07/2018,- ,EP4,sunny; breezy,medium ,medium ,moderate,75-100,87.5,75-100,87.5,,11,0.2,130,3,3,gravel,sand ,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
+,Perl 4 ,02/08/2018,12:30,EP4,sunny; still,hot ,medium,clear,25-49,37,0-24,12,,8,0.5,155,3,3,gravel ,silt,0,0,0,1,S(1),FA(1); F(1) ,0,0,1,0,1,1,0,0,
+,Perl 4 ,06/08/2018,10:15,EP4,sunny; breezy ,hot ,slow ,moderate ,75-100 ,87.5,50-74,62,,5,1,50,3,3,gravel ,sand ,0,0,1,0,0,AA(1); SC(1) ,0,0,0,0,0,0,1,1,
+,Perl 4 ,09/08/2018,13:47,EP4,sunny; still ,hot ,fast ,murky ,75-100,87.5,50-74,62,,9.8,3.9,113,3,3,gravel ,silt ,2,2,2,2,S(1),FA(1); F(1); AA(1); SC(1) ,0,0,1,0,1,1,1,1,
+,Perl 4 ,16/08/2018,11:17,EP4,still,,slow ,murky ,50-74,62,0-24,1,,17,0.5,150,3,3,clay,sand ,0,0,1,1,0,0,0,0,0,0,0,0,0,0,
+,Perl 4 ,20/08/2018,11:30,EP4,cloudy; breezy ,hot ,medium ,clear ,25-49,37,25-49,37,,16.5,0.4,156,3,3,silt ,clay ,1,1,1,1,RF(1);S(1),F(1); AA(1); SC(1),0,1,1,0,0,1,1,1,
+,Perl 4 ,03/09/2018,12:00,EP4,sunny; still,hot ,slow ,clear,25-49,37,25-49 ,37,,16,0.1,98,3,3,sand ,gravel,2,1,1,1,E(1); RF(1); S(1),F(1);AA(1);SC(1),1,1,1,0,0,1,1,1,
+,Perl 4 ,17/09/2018,11:55,EP4,cloudy; still,N/A,slow ,moderate ,50-74,62,25-49,37,,18,0.25,115,3,3,silt ,gravel,0,1,1,1,RF(1),F(1),0,1,0,0,0,1,0,0,
+,Perl 4 ,20/09/2018,12:30,EP4,cloudy; still,N/A,slow ,moderate ,50-74,62,50-74,62,,7,0.3,38,3,3,sand ,gravel,2,1,2,1,E(1); RF(1); S(2); FF(1),FA(2); F(2); AA(2); SC(2),1,1,2,1,2,2,2,2,
+,Perl 4 ,24/09/2018,11:30,EP4,cloudy; breezy,cold,slow ,murky ,25-49,37,25-49,37,,9.75,0.15,131,3,3,sand ,gravel,1,1,1,2,E(1); RF(1),FA(2); F(1); AA(1); SC(1),1,1,0,0,2,1,1,1,ET-1 damaged and brought back to lab for repairs 
+,Perl 4 ,08/10/2018,12:30,EP4,sunny; still,,medium,clear,50-74,62,25-49,37,,19,0.7,145,3,,sand ,silt ,1,0,1,0,,,0,0,1,0,0,1,1,1,
+,Taylor,03/05/2018,13:36,AT,cloudy; windy,medium,slow,clear,0-24,12,0-24,12,,16,100,100,3,,sand,silt,1,0,1,0,S(1),N/A,,,,,,,,,
+,Taylor,07/05/2018,15:30,AT,sunny; breezy,medium,slow,clear,0-24,12,0-24,12,silt,38,0,100,,,silt/sand,gravel,1,1,1,1,E (1); RF (1); S (1),"F (1), A(1)",,,,,,,,,
+,Taylor,10/05/2018,9:30,AT,cloudy; windy,,medium ,clear,0-24,12,0-24,12,narrow area downstream of all traps,21,1,55,3,3,silt/ sand,gravel/ cobble,,present,present,present,RF (present); S (present),FA (present); SC (present),,,,,,,,,
+,Taylor,14/05/2018,13:30,AT,cloudy; breezy,,slow,moderate ,25-49,37,0-24,12,,35,,200,3,,mud,sand,,,,,E (present); S (present),,1,0,1,0,0,0,0,0,ww/ hh/ depth estimated
+,Taylor,17/05/2018,13:15,AT,sunny; still; breezy,hot,slow,clear,25-49,37,0-24,12,"*notes... was flooded, still collected sample",25,2.5,125,3,3,gravel ,sand,1,1,1,0,E(1),F(1),1,0,0,0,1,0,0,0,
+,Taylor,21/05/2018,14:36,AT,cloudy; breezy,medium,slow,moderate ,0-24,12,0-24,12,,27.9,0,210,3,3,sand,a little gravel,0,0,0,0,E(1),FA(1); F(1),1,0,0,0,1,1,0,0,noticed aquatic larva in PT-1
+,Taylor,24/05/2018,11:37,AT,sunny; still,,slow,clear,0-24,12,0-24,12,,14.4,0.14,132.6,,,,,1,2,1,2,E(2); S(2); FF(2),FA(1); F(1); AA(1),2,0,2,2,1,1,1,0,subset of benthic sample- too many rocks
+,Taylor,28/05/2018,14:30,AT,sunny; breezy,hot,slow,murky ,25-49,37,0-24,12,,27.5,0,210,,,"sand, silt",cobble/gravel,1,0,0,1,E(1); RF(1),FA(2); F(2); AA(1); SC(2),1,1,0,0,2,2,1,2,
+,Taylor,31/05/2018,13:30,AT,sunny; cloudy; breezy,,slow,murky ,25-49,37,0-24,12,,18,0,103,,,silt,clay,0,0,1,1,E(2); S(1),FA(1); AA(1),,,,,,,,,"E and S circled for dominant macrophytes, FA circled for dominant algae"
+,Taylor,04/06/2018,13:39,AT,cloudy; breezy,,slow,moderate ,25-49,37,0-24,12,,25,0,100,,3,mud,sand,0,0,1,0,E(2); RF(1),,,,,,,,,,"Farthest PT overturned, data still collected. ET off water surface, did not fix"
+,Taylor,11/06/2018,14:05,AT,sunny; breezy,hot,slow,clear,50-74,62,0-24,12,,19,0,184,3,,3 sand,4 gravel,1,0,1,0,E(1),AA(1); SC(1),1,0,0,0,0,0,1,1,"Light logger 20327847, Batt level= 100%, Time= 3:03 pm, Name: Taylor, Restarting @ 15 min intervals @ 3:15 pm. Both loggers moved to trap 3 bc deeper water. Level logger was nearly out of water. Emergent circled for dom macrophytes, slimes or crusts for algae"
+,Taylor,14/06/2018,,AT,sunny; breezy,hot,,,25-49,37,0-24,12,,,,,,,,,1,0,1,0,,FA(2); F(2); AA(2),0,0,0,0,2,2,2,0,ET#1 moved 3 m upstream (was not in water)
+,Taylor,18/ 06/2018,13:25,AT,sunny; breezy,hot,slow,moderate,25-49,37,0-24,12,,19.5,0,105,,,sand,,1,0,1,0,,FA(1); F(1),0,0,0,0,1,1,0,0,
+,Taylor,21/06/2018,13:30,AT,sunny; breezy,,slow,clear,25-49,37,0-24,12,,12,0,90,,,mud,rocks,,,,,E(2); RF(2),F(1); AA(1),2,2,0,0,0,1,1,0,
+,Taylor,25/06/2018,14:00,AT,sunny; breezy,,medium,clear,25-49,37,0-24,12,,21,0.2,128,,1,sand,gravel,,,,,E(1); RF(1),F(2); AA(2); SC(2),1,1,0,0,0,2,2,2,
+,Taylor,28/06/2018,15:30,AT,sunny; still,,slow,moderate,25-49,37,0-24,12,,28.6,0,400,,,gravel,sand,1,0,2,1,RF(2); S(2),F(1); AA(1); SC(1),0,2,2,0,0,1,1,1,"Benthic sampling in refugia close to road (where minnow trap 2). V. diff bio- ++ water boatmen, backswimmer, crayfish, tadpoles"
+,Taylor,02/07/2018,14:30,AT,cloudy; still,,medium,moderate,25-49,37,0-24,12,,15,0,125,,,sand,silt,,,,,E(2); RF(1); S(1),F(1); AA(1); SC(1),2,1,1,0,0,1,1,1,
+,Taylor,05/07/2018,9:50,AT,sunny; still,,slow,moderate,75-100,87.5,0-24,12,,20,0,50,3,3,silt,sand,1,1,1,0,E(1); RF(1); S(1),AA(1); SC(1),1,1,1,0,0,0,1,1,
+,Taylor,09/07/2018,13:30,AT,sunny; breezy,,slow,clear,75-100,87.5,0-24,12,,10,0,90,3,3,silt,sand,0,0,1,1,E(2); RF(2); S(2); FF(1),FA(1);F(2);AA(1);SC(2),2,1,2,1,1,2,1,2,
+,Taylor,12/07/2018,16:00,AT,sunny; still,medium,slow,murky,75-100,87.5,25-49,37,,11.5,0,95,3,3,silt ,clay ,0,0,1,0,E(1),FA(1); F(1); AA(1); SC(1),1,0,0,0,1,1,1,1,
+,Taylor,30/07/2018,13:30,AT,cloudy; still,medium ,slow,murky ,25-49,37,0-24,12,,25,0,175,3,3,sand ,silt,0,0,0,1,E(1); RF(1); S(1),FA(0); F(1); AA(0); SC(1),1,1,1,0,0,1,0,1,one of the emergent traps was replaced
+,Taylor,30/08/2018,14:30,AT,cloudy; breezy ,N/A,slow ,murky ,50-74,62,25-49,37,,16,0,195,3,3,N/A,N/A,2,0,1,1,E(1);S(1),F(1); AA(1); SC(2),1,0,1,0,0,1,1,2,PT-2 was tipped over and had a fish in it 
+,Taylor,03/09/2018,13:00,AT,sunny; still,hot,slow,murky,25-49,37,0-24,12,,6.5,0.1,136,,,silt,sand,2,1,2,1,,,1,1,1,2,2,2,2,2,
+,Taylor,20/09/2018,13:30,AT,cloudy; still,N/A,slow ,murky ,50-74,62,0-24,12,,25,0,246,3,3,silt ,clay,2,2,2,2,E(2); RF(2); S(2); FF(2),FA(2); F(2); AA(2); SC(2),2,2,2,2,2,2,2,2,
+,Taylor,27/09/2018,11:00,AT,cloudy; still,medium,slow,murky,50-74,62,0-24,12,,18,0,300,,3,sand ,silt ,0,0,2,1,,,1,0,0,0,0,0,0,0,
+,Taylor,04/10/2018,10:30,AT,cloudy; windy,medium,slow ,clear,25-49,37,25-49,37,,30,0,130,3,3,silt ,clay ,1,1,2,1,RF(2); S(2); FF(2),FA(2);F(1); AA(2); SC(2),0,2,2,2,2,1,2,2,
+,Taylor,08/10/2018,8:15,AT,cloudy,cold,slow,,0-24,12,50-74,62,,63,0,236,3,,silt ,clay,,,,,,,1,1,1,1,1,2,2,2,
+,Taylor,11/10/2018,,AT,sunny; windy,cold,slow,moderate,25-49,37,0-24,12,,26,0,235,3,,silt ,sand ,1,2,1,2,,,1,1,1,1,2,2,2,1,
+,Taylor,15/10/2018,18:00,AT,sunny; windy,cold,,,0-24,12,0-24,12,,41,0,200,3,3,clay,silt ,1,1,1,1,,,0,0,0,0,2,0,1,1,
+,Taylor,18/10/2018,11:00,AT,sunny; breezy,cold,medium,,25-49,37,0-24,12,,25,0,163,3,,silt ,clay,2,1,2,1,,,0,1,2,0,2,1,1,1,
+,Taylor,22/10/2018,12:45,AT,sunny; breezy,cold,slow,clear,0-24,12,0-24,12,,18,0,100,3,3,sand,cobble,1,0,2,2,,,0,0,0,0,0,1,2,0,
+,Taylor,25/10/2018,,AT,cloudy; still,cold,slow,murky,25-49,37,0-24,12,,12,0.1,95,3,,sand,silt,1,0,2,0,,,1,1,1,0,0,0,1,1,
+,Taylor,29/10/2018,12:15,AT,windy,cold,medium,murky,0-24,12,0-24,12,,49,0.5,126,,3,clay,silt,0,1,0,1,,,1,1,0,0,0,0,0,0,
+,Taylor,01/11/2018,10:30,AT,cloudy; still; rainy,cold,fast,murky,25-49,37,0-24,12,,75,0.6,432,3,3,silt,clay,1,2,1,1,,,1,1,1,1,0,1,1,1,
+,Taylor,05/11/2018,14:00,AT,cloudy; breezy,cold,medium,murky,0-24,12,0-24,12,,68,0.75,268,,3,clay,silt,0,1,2,2,,,1,1,0,0,0,0,0,0,
+,Taylor ,16/07/2018,10:30,AT,sunny; still,hot ,slow ,murky ,0-24,12,0-24,12,,17,0,235,3,3,silt ,clay ,2,2,2,2,E(1);RF(1);S(1);FF(1) ,FA(0); F(1); AA(1); SC(1),1,1,1,1,0,1,1,1,Pan trap 2 was tipped over & stream had significantly dried up
+,Taylor ,19/07/2018,13:30,AT,sunny; breezy ,medium ,slow,murky ,50-74,62,0-24,12,,,0,- ,3,3,silt,clay ,1,2,0,2,RF(1);S(2);FF(2),FA(2); F(1); AA(1); SC(2),0,1,2,2,2,1,1,2,Could not accurately measure depth? 
+,Taylor ,23/07/2018,13:00,AT,cloudy; still,medium ,slow,murky,,,,,,40.5,0,30.5,3,3,silt,clay ,2,2,1,1,E(1); RF(1); S(1); FF(2),FA(1); F(1); AA(1); SC(1),1,1,1,2,1,1,1,1,
+,Taylor ,26/07/2018,9:50,AT,cloudy; breezy,medium ,slow,murky ,75-100,87.5,0-24,12,,23,0.2,285.5,3,3,gravel ,sand,0,1,0,0,E(2); RF(1),SC(1),2,1,0,0,0,0,0,1,"PT1 was flooded and little water left underneath, PT3 filled with water but not actively overflowing, PT2 overflowing. ET2 taken to lab for repairs "
+,Taylor ,06/08/2018,9:00,AT,sunny,hot,N/A,N/A,75-100,87.5,25-49,37,,15.8,0,200,3,3,silt ,gravel,2,2,2,2,FF(1),SC(1),0,0,0,1,0,0,0,1,"lots of grass covering stream, few trees, ET-2 broken and removed for repair "
+,Taylor ,09/08/2018,10:20,AT,sunny; still,hot,medium ,murky ,0-24,12,0-24,12,,17.2,0.3,130,3,3,silt ,clay ,0,1,0,1,RF(1); S(1),FA(2); F(1); AA(2); SC(1),0,1,1,0,2,1,2,2,
+,Taylor ,13/08/2018,10:10,AT,sunny; breezy ,medium ,N/A ,N/A,75-100,87.5,25-49 ,37,,3,0,100,3,3,silt ,gravel/ sand ,2,1,2,1,0,FA(1); AA(1); SC(2),0,0,0,0,1,0,1,2,
+,Taylor ,16/08/2018,14:00,AT,still,cold,slow ,murky ,75-100,87.5,0-24,12,,10,0.5,33,3,3,clay,sand ,1,0,1,1,RF(1),0,0,1,0,0,0,0,0,0,
+,Taylor ,20/08/2018,- ,AT,cloudy;still,hot,slow ,murky ,50-74,62,0-24,12,,17,0,235,3,3,clay,silt ,0,0,0,0,E(1); RF(1); S(1),FA(2); F(2); AA(2); SC(2) ,1,1,1,0,2,2,2,2,"ET-1 and ET-2 returned to lab for repairs, PT-1 and PT-2 overflowed "
+,Taylor ,23/08/2018,13:30,AT,sunny,,slow ,murky ,,,,,,13,0,263,3,3,silt ,fine sand ,1,1,0,0,E(1); RF(1),AA(1),1,1,0,0,0,0,1,0,PT-1 flooded; ET-1 replaced with repaired ET; PT-2 flooded and fully submerged; ET2 replaced with repaired ET
+,Taylor ,27/08/2018,12:20,AT,cloudy; still,medium,slow ,murky ,N/A,N/A,N/A,N/A,,35,0,280,3,3,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,,,,,,,,,
+,Taylor ,03/08/2018,13:00,AT,sunny; still,hot ,slow ,murky ,25-49,37,0-24,12,,6.5,0.1,136,3,3,silt ,sand ,2,1,2,1,E(1); RF(1); S(1); FF(2),FA(2); F(2); AA(2); SC(2)  ,1,1,1,2,2,2,2,2,
+,Taylor ,06/09/2018,N/A ,AT,cloudy; breezy ,medium ,slow ,murky ,25-49,37,0-24,12,,14,0,243,3,3,clay,silt ,N/A,N/A,N/A,N/A,E(2);RF(2); S(2); FF(2),FA(2); F(2); AA(2); SC(2)  ,2,2,2,2,2,2,2,2,PT closest to road was mostly submerged 
+,Taylor ,10/09/2018,,AT,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Taylor ,13/09/2018,11:00,AT,cloudy; breezy,N/A,slow ,murky ,75-100,87.5,0-24,12,,11,0,390,3,3,sand ,silt ,0,0,2,0,S(2),FA(2); SC(1),,,,,,,,,
+,Taylor ,17/09/2018,13:15,AT,cloudy; breezy,hot ,slow ,murky ,75-100,87.5,0-24,12,,26,0,256,3,3,sand ,silt ,1,1,1,2,RF(1),FA(1); AA(1); SC(1),0,1,0,0,1,0,1,1,
+,Taylor ,24/09/2018,12:30,AT,cloudy; windy,cold,slow ,murky ,25-49,37,0-24,12,,13,0.1,191,3,3,sand ,silt ,1,2,2,1,0,FA(1); F(1); AA(1); SC(1),0,0,0,0,1,1,1,1,ET-1 damaged and brought back to lab for repairs 
