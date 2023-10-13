@@ -2,7 +2,7 @@
 ##By: Marie Gutgesell
 ##Date: May 4, 2022
 
-source("~/Desktop/Seasonal Stream Food Webs/Code/Stable Isotope Analysis/Seasonal FW_SI Dataset Formation.R")
+source("code/Stable Isotope Analysis/Seasonal FW_SI Dataset Formation.R")
 
 ##Plot scatter plot of dH and dN of algae and detritus 
 

@@ -1,10 +1,10 @@
 ##Seasonal Stream Food Webs_SI Dataset Formation
 ##By: Marie Gutgesell
 ##Date: May 4, 2022
-##Updated Code: 
+##Updated Code: October 12, 2023
 
 ##Set Working Directory
-setwd("~/Desktop/Seasonal Stream Food Webs/Data/Stable Isotope Data")
+#setwd("data/Stable Isotope Data")
 
 ##Load Packages -- 
 library(tidyverse)
@@ -14,14 +14,14 @@ library(lubridate)
 library(readxl)
 
 ##Import dH and CN data
-dH_HC <- read.csv("HC_dH_clean.csv", stringsAsFactors = FALSE)
+dH_HC <- read.csv("data/Stable Isotope Data/HC_dH_clean.csv", stringsAsFactors = FALSE)
 names(dH_HC)[2] <- "Sample_ID"
 names(dH_HC)[5] <- "d2H"
 names(dH_HC)[9] <- "Species"
 dH_HC <- dH_HC %>%
   select(Sample_ID, d2H, Species)
 
-dH_EP4 <- read.csv("EP4_dH_clean.csv", stringsAsFactors = FALSE)
+dH_EP4 <- read.csv("data/Stable Isotope Data/EP4_dH_clean.csv", stringsAsFactors = FALSE)
 names(dH_EP4)[2] <- "Sample_ID"
 names(dH_EP4)[5] <- "d2H"
 names(dH_EP4)[9] <- "Species"
@@ -29,7 +29,7 @@ dH_EP4 <- dH_EP4 %>%
   select(Sample_ID, d2H, Species)
 
 
-dH_AT <- read.csv("AT_dH_clean.csv", stringsAsFactors = FALSE)
+dH_AT <- read.csv("data/Stable Isotope Data/AT_dH_clean.csv", stringsAsFactors = FALSE)
 names(dH_AT)[2] <- "Sample_ID"
 names(dH_AT)[5] <- "d2H"
 names(dH_AT)[9] <- "Species"
@@ -44,7 +44,7 @@ dH_all <- rbind(dH_HC, dH_EP4, dH_AT) %>%
 
 
 ##
-dCN_all <- read.csv("SI data MASTER Marie Gutgesell 2019_clean.csv", stringsAsFactors = FALSE)
+dCN_all <- read.csv("data/Stable Isotope Data/SI data MASTER Marie Gutgesell 2019_clean.csv", stringsAsFactors = FALSE)
 names(dCN_all)[1] <- "Sample_ID"
 names(dCN_all)[2] <- "d13C"
 names(dCN_all)[3] <- "per_C"

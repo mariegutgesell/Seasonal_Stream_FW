@@ -6,7 +6,7 @@ set.seed(1)
 library(SIBER)
 
 
-source("~/Desktop/Seasonal Stream Food Webs/Code/Stable Isotope Analysis/Seasonal FW_TP & Coupling.R")
+source("code/Stable Isotope Analysis/Seasonal FW_TP & Coupling.R")
 rm(cc_seasonal_stream_si_plot_site_adj, coupling_boxplot, SI_all, SI_cc_al_dt_adj, TP_boxplot)
 ##Set up dataframe for SIBER ------------
 seasonal_df_split_pred_tp_bound$Season <- as.character(seasonal_df_split_pred_tp_bound$Season)

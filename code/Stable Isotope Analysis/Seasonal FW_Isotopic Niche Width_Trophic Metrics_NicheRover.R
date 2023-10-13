@@ -2,8 +2,8 @@
 
 ##Using nicheRover
 
-source("~/Desktop/Seasonal Stream Food Webs/Code/Stable Isotope Analysis/Seasonal FW_TP & Coupling.R")
-rm(seasonal_df_split_pred_tp_bound_noout, cc_seasonal_stream_si_plot_site_adj, coupling_boxplot, SI_all, SI_cc_al_dt_adj, TP_boxplot, leg_fig, tc_dh_plot, tp_dn, tp_dn_plot, gplot, data)
+source("code/Stable Isotope Analysis/Seasonal FW_TP & Coupling.R")
+#rm(seasonal_df_split_pred_tp_bound_noout, cc_seasonal_stream_si_plot_site_adj, coupling_boxplot, SI_all, SI_cc_al_dt_adj, TP_boxplot, leg_fig, tc_dh_plot, tp_dn, tp_dn_plot, gplot, data)
 
 library(nicheROVER)
 ?niche.size
@@ -11,7 +11,7 @@ library(nicheROVER)
 
 ###1) Format data for use in nicheRover (TP and %TC as columns, each row is an observation)
 ##Create column that combines site and season
-seasonal_df_split_pred_tp_bound <- seasonal_df_split_pred_tp_bound%>%
+seasonal_df_split_pred_tp_bound_noout <- seasonal_df_split_pred_tp_bound_noout%>%
   mutate(Group = case_when(
     startsWith(Sample_ID, "HC1") ~ "HC_spring",
     startsWith(Sample_ID, "HC2") ~ "HC_summer", 
@@ -89,18 +89,18 @@ over.stat <- overlap(fish.par, nreps = nsamples, nprob = 1e4, alpha = c(.95, 0.4
 over.mean <- apply(over.stat, c(1:2,4), mean)*100 
 mean_overlap <- round(over.mean, 2)
 mean_overlap<- as.data.frame(mean_overlap)
-write.csv(mean_overlap, "~/Desktop/Seasonal Stream Food Webs/mean_niche_overlap.csv")
+write.csv(mean_overlap, "outputs/mean_niche_overlap.csv")
 
 
 ##determine credible interval of overlap
 over.cred <- apply(over.stat*100, c(1:2, 4), quantile, prob = c(.025, .975), na.rm = TRUE)
 cred_overlap_95 <- round(over.cred[,,,1]) # display alpha = .95 niche region
 cred_overlap_95 <- as.data.frame(cred_overlap_95)
-write.csv(cred_overlap_95, "~/Desktop/Seasonal Stream Food Webs/CI_niche_overlap_95.csv")
+write.csv(cred_overlap_95, "outputs/CI_niche_overlap_95.csv")
 
 cred_overlap_40 <- round(over.cred[,,,2])
 cred_overlap_40 <- as.data.frame(cred_overlap_40)
-write.csv(cred_overlap_40, "~/Desktop/Seasonal Stream Food Webs/CI_niche_overlap_40.csv")
+write.csv(cred_overlap_40, "outputs/CI_niche_overlap_40.csv")
 
 
 ##Plot 95% overlap
@@ -193,7 +193,7 @@ sea_tukey_mean <- TukeyHSD(sea_anova_mean)
 sea_tukey_mean[["Site"]]
 
 #Make ellipse plot in ggplot
-seasonal_df_split_pred_tp_bound <- seasonal_df_split_pred_tp_bound%>%
+seasonal_df_split_pred_tp_bound_noout <- seasonal_df_split_pred_tp_bound_noout%>%
   mutate(Site_Type = case_when(
     startsWith(Group, "HC") ~ "Low Impact",
     startsWith(Group, "EP4") ~ "Mid Impact", 
@@ -201,7 +201,7 @@ seasonal_df_split_pred_tp_bound <- seasonal_df_split_pred_tp_bound%>%
   ))
 
 
-data_2 <- seasonal_df_split_pred_tp_bound %>%
+data_2 <- seasonal_df_split_pred_tp_bound_noout %>%
   select(Site_Type, Season, TC_pred_logit, TP_pred)
 
 data_2$Site_Type <- ordered(data_2$Site_Type,

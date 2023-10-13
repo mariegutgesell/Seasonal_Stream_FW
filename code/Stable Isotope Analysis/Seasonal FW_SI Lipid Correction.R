@@ -1,6 +1,6 @@
 ##Seasonal Stream Food Webs_SI Analysis --- Lipid Correction Code
 
-source("~/Desktop/Seasonal Stream Food Webs/Code/Stable Isotope Analysis/Seasonal FW_Bi-Plots.R")
+source("code/Stable Isotope Analysis/Seasonal FW_Bi-Plots.R")
 
 ##Remove outliers (see Seasonal FW_Baseline Outliers.R code to see how outliers were determined)
 

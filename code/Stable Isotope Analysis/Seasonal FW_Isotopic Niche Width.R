@@ -5,7 +5,7 @@
 set.seed(1)
 library(SIBER)
 
-source("~/Desktop/Seasonal Stream Food Webs/Code/Stable Isotope Analysis/Seasonal FW_Bi-Plots.R")
+source("code/Stable Isotope Analysis/Seasonal FW_Bi-Plots.R")
 
 ##Set up dataframe to prep for SIBER ------------
 ##Remove outliers (see Seasonal FW_Baseline Outliers.R code to see how outliers were determined)

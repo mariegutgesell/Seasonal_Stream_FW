@@ -1,5 +1,6 @@
 ##Isotopic Niche Space Figure
-source("~/Desktop/Seasonal Stream Food Webs/Code/Stable Isotope Analysis/Seasonal FW_Isotopic Niche Width_Trophic Metrics_NicheRover.R")
+getwd()
+source("code/Stable Isotope Analysis/Seasonal FW_Isotopic Niche Width_Trophic Metrics_NicheRover.R")
 
 ##join ellipse.plot and SEA_plot
 
@@ -38,5 +39,6 @@ iso_niche_fig_2 <- ggarrange(ellipse.plot,
           ncol = 2,  labels = "a)",font.label = list(colour = "black", size = 12, family = "Times New Roman"))
 
 iso_niche_fig_2
+
 
 

@@ -2,7 +2,7 @@
 ##By: Marie Gutgesell
 ##Date: May 4, 2022
 
-source("~/Desktop/Seasonal Stream Food Webs/Code/Stable Isotope Analysis/Seasonal FW_Bi-Plots.R")
+source("code/Stable Isotope Analysis/Seasonal FW_Bi-Plots.R")
 
 
 ##Remove baseline outliers (see Seasonal FW_Baseline Outliers.R code to see how outliers were determined)
@@ -165,12 +165,12 @@ mean_trophic_metrics <- seasonal_df_split_pred_tp_bound_noout %>%
   group_by(Site, Season) %>%
   summarise_all(mean)
 
-coupling_boxplot <- ggplot(seasonal_df_split_pred_tp_bound_noout, aes(x = Season, y = TC_pred, fill = Site_Type)) +
+coupling_boxplot <- ggplot(seasonal_df_split_pred_tp_bound_noout, aes(x = Season, y = TC_pred_logit, fill = Site_Type)) +
   geom_boxplot() +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
   theme_classic() +
-  ylab("% Terrestrial Energy Use") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),axis.text.y = element_text(size = 14),axis.title.y=element_text(size = 14), axis.title.x = element_blank(), legend.position = "right", text = element_text(family = "Times New Roman"))+
+  ylab("% Terrestrial Energy Use (logit)") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 12), axis.title.x = element_blank(), legend.position = "right", text = element_text(family = "Times New Roman"))+
   guides(fill = guide_legend(title="Site"))
 
 
@@ -218,11 +218,11 @@ summary(coupling_anova)
 
 coupling_tukey <- TukeyHSD(coupling_anova)
 coupling_tukey_table <- coupling_tukey[["Site_Type:Season"]]
-write.csv(coupling_tukey_table, "~/Desktop/Seasonal Stream Food Webs/R output tables/coupling_tukey_table.csv")
+write.csv(coupling_tukey_table, "outputs/coupling_tukey_table.csv")
 
 tp_anova <- aov(TP_pred ~ Site_Type + Season, seasonal_df_split_pred_tp_bound_noout)
 summary(tp_anova)
 tp_tukey <- TukeyHSD(tp_anova)
 tp_tukey_table <- tp_tukey[["Site_Type:Season"]]
-write.csv(tp_tukey_table, "~/Desktop/Seasonal Stream Food Webs/R output tables/tp_tukey_table.csv")
+write.csv(tp_tukey_table, "outputs/tp_tukey_table.csv")
 
