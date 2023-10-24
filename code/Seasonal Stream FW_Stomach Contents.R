@@ -1,7 +1,6 @@
 ##Stomach Content Data for Seasonal Stream Food Webs -- Creating summary figure
 
-##Set Working Directory
-setwd("~/Desktop/Seasonal Stream Food Webs/Data/Fish Meta Data")
+
 
 ##Load Packages -- 
 library(tidyverse)
@@ -9,15 +8,16 @@ library (dplyr)
 library(tidyr)
 library(lubridate)
 library(readxl)
+library(ggpubr)
 
-fish_meta <- read_excel("2018_M3 Electrofishing Data_MASTER.xlsx")
+fish_meta <- read.csv("data/Fish_Collection_Data/2018_Fish_Marie_CollectionData.csv")
 
 fish_meta_cc <- fish_meta %>%
   filter(Species == "CC") %>%
   filter(Kept == "Y") %>%
   select(Season, Site, Species, Sample_ID, Stomach_Contents)
 
-taylor_spring_sc <- read_excel("Taylor_Spring_Minnow Trap_Stomach Contents.xlsx") %>%
+taylor_spring_sc <- read_excel("data/Fish_Collection_Data/Taylor_Spring_Minnow Trap_Stomach Contents.xlsx") %>%
   select(Season, Site, Species, Sample_ID, Stomach_Contents)
 
 fish_meta_cc <- rbind(fish_meta_cc, taylor_spring_sc)
@@ -35,25 +35,32 @@ fish_meta_cc <- rbind(fish_meta_cc, taylor_spring_sc)
 ##not including parasites as part of stomach contents
 ##brown goo? 
 
+stomach_content_types <- as.data.frame(unique(fish_meta_cc$Stomach_Contents))
+
 fish_meta_cc <- fish_meta_cc %>%
   mutate(stomach_content_group = case_when(
-    startsWith(Stomach_Contents, "algae/insect") ~ "Omnivore",
+    startsWith(Stomach_Contents, "algae, insect") ~ "Omnivore",
+    startsWith(Stomach_Contents, "insects, algae") ~ "Omnivore",
+    startsWith(Stomach_Contents, "algae/bug") ~ "Omnivore",
     startsWith(Stomach_Contents, "plant matter/insect") ~ "Omnivore",
     startsWith(Stomach_Contents, "gastropod/algae") ~ "Omnivore",
     startsWith(Stomach_Contents, "detritus/insects") ~ "Omnivore",
-    startsWith(Stomach_Contents, "detritus/fish/insects") ~ "Omnivore",
+    startsWith(Stomach_Contents, "detritus, insects") ~ "Omnivore",
+    startsWith(Stomach_Contents, "detritus, fish, insects") ~ "Omnivore",
     startsWith(Stomach_Contents, "detritus/bug") ~ "Omnivore",
-    startsWith(Stomach_Contents, "algae/bug") ~ "Omnivore",
+    startsWith(Stomach_Contents, "worms") ~ "Insect",
     grepl("empty", Stomach_Contents) ~ "Empty",
     grepl("not taken", Stomach_Contents) ~ "Unknown",
     grepl("unid", Stomach_Contents) ~ "Unknown",
+    grepl("Unid", Stomach_Contents) ~ "Unknown",
     grepl("worm/algae", Stomach_Contents) ~ "Omnivore",
-    grepl("detritus", Stomach_Contents) ~ "Detritus",
-    grepl("insect", Stomach_Contents) ~ "Insect",
+    startsWith(Stomach_Contents, "detritus") ~ "Detritus",
+    startsWith(Stomach_Contents, "insect") ~ "Insect",
+    startsWith(Stomach_Contents, "insects, algae") ~ "Omnivore",
     grepl("beetle", Stomach_Contents) ~ "Insect", 
-    grepl("worm", Stomach_Contents) ~ "Insect",
+    grepl("insects/worm", Stomach_Contents) ~ "Insect",
     startsWith(Stomach_Contents, "algae") ~ "Algae",
-    grepl("unknown", Stomach_Contents) ~"Unknown",
+    grepl("UNK", Stomach_Contents) ~"Unknown",
     grepl("damselfly", Stomach_Contents) ~"Insect",
     grepl("chironomid", Stomach_Contents) ~"Insect",
     grepl("brown goo", Stomach_Contents) ~ "Unknown"
@@ -144,6 +151,8 @@ stomach_prop_insect <- stomach_prop %>%
   group_by(Site_Code, stomach_content_group) %>%
   summarise_at(vars(prop), list(prop_mean = mean))
 
+##calculate magnitude of difference between low and high impact proportion of predators
+mag_diff_pred <- 0.6500000/0.2623188
 
 insect_prop_plot <- ggplot(stomach_prop_insect, aes(x = Site_Code, y = prop_mean, fill = stomach_content_group)) +
   geom_bar(stat = "identity", colour = "black") +
