@@ -9,8 +9,8 @@ library(SIBER)
 source("code/Stable Isotope Analysis/Seasonal FW_TP & Coupling.R")
 rm(cc_seasonal_stream_si_plot_site_adj, coupling_boxplot, SI_all, SI_cc_al_dt_adj, TP_boxplot)
 ##Set up dataframe for SIBER ------------
-seasonal_df_split_pred_tp_bound$Season <- as.character(seasonal_df_split_pred_tp_bound$Season)
-siber_cc_tm <- seasonal_df_split_pred_tp_bound %>%
+seasonal_df_split_pred_tp_bound_noout$Season <- as.character(seasonal_df_split_pred_tp_bound_noout$Season)
+siber_cc_tm <- seasonal_df_split_pred_tp_bound_noout %>%
   mutate(group = case_when(
     startsWith(Season, "Spring") ~ "1",
     startsWith(Season, "Summer") ~ "2",
@@ -27,7 +27,7 @@ siber_cc_tm <- siber_cc_tm %>%
 
 ##Set up dataframe so formatted for SIBER
 siber_cc_tm <- siber_cc_tm %>%
-  select(TC_pred, TP_pred, group, community)
+  select(TC_pred_logit, TP_pred, group, community)
 
 names(siber_cc_tm)[1] <- "iso1"  ##% terrestrial coupling
 names(siber_cc_tm)[2] <- "iso2" ##trophic position
@@ -86,7 +86,7 @@ first.plot <- ggplot(data = siber_cc_ggplot,
                          y = TP_pred)) + 
   geom_point(aes(color = community, shape = group), size = 5) +
   ylab("Trophic Position") +
-  xlab("% Terrestrial Coupling") + 
+  xlab("% Terrestrial Coupling (logit)") + 
   theme(text = element_text(size=16)) + 
   scale_color_manual(values = c("#999999", "#E69F00", "#56B4E9")) + 
   theme_classic()
