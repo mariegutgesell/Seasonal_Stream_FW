@@ -1,16 +1,16 @@
 ##Seasonal Stream Food Webs_Fish Density & Size Plots
 ##By: Marie Gutgesell
 ##Date: May 5, 2022
-##Updated Code: 
+##Updated Code: Oct 24, 2023
 
-##Set Working Directory
-setwd("~/Desktop/Seasonal Stream Food Webs/Data/Fish Meta Data")
+
 
 library(readxl)
 library(dbplyr)
 library(tidyverse)
-fish_meta <- read_excel("2018_M3 Electrofishing Data_MASTER.xlsx")
+fish_meta <- read.csv("data/Fish_Collection_Data/2018_Fish_Marie_CollectionData.csv")
 
+##okay, so somehow in cleaning the datasheet there are a whole bunch of new bulk samples.. for hc fall, why?? need to go pick up raw data sheets, not sure wtf is happening 
 
 ##Looking at total fish density per site across season
 
@@ -27,6 +27,13 @@ fish_density_sp <- aggregate(Number_of_Individuals ~ Season + Site + Species, fi
   
 
 fish_density_all <- aggregate(Number_of_Individuals ~ Season + Site, fish_meta, sum)
+
+hc_fall <- fish_meta %>%
+  filter(Season == "Fall") %>%
+  filter(Site == "Hawk Cliff") %>%
+  summarise(vars(Number_of_Individuals), sum)
+
+aggregate(hc_fall$Number_of_Individuals, sum)
 
 fish_density_all <- fish_density_all %>%
   mutate(Site_Code = case_when(
@@ -46,7 +53,7 @@ fish_density_all_plot <- ggplot(fish_density_all, aes(x = Season, y = Number_of_
    theme_classic() +
   facet_wrap(~Site_Code) +
   ylab("Abundance") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),axis.text.y = element_text(size = 14),axis.title.y=element_text(size = 14), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank()) 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),axis.text.y = element_text(size = 12),axis.title.y=element_text(size = 12), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank()) 
 
 fish_density_all_plot
 
