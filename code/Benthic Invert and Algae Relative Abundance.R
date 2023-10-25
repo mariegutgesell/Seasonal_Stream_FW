@@ -1,10 +1,7 @@
 ##Seasonal Stream Food Webs -- Benthic invert & aquatic vegetation data (within stream resources)
 ##By: Marie Gutgesell
 ##Date: June 9, 2022
-
-
-##Set Working Directory
-setwd("~/Desktop/Seasonal Stream Food Webs/Data/")
+##Updated: Oct 24, 2023
 
 ##Load Packages 
 library(ggplot2)
@@ -19,7 +16,7 @@ library(stringr)
 library(ggpubr)
 
 ##Read in datafiles
-benthic_data <- read.csv ("M3 Insect Data/Benthic Monitoring ID Sheet_MASTER.csv")
+benthic_data <- read.csv ("data/M3 Insect Data/Benthic Monitoring ID Sheet_MASTER.csv")
 benthic_data$newdate <-strptime(as.character(benthic_data$Date), "%Y-%m-%d")
 #benthic_data$newdate <- str_trim(benthic_data$newdate)
 
@@ -30,7 +27,7 @@ benthic_data$newdate <- as.Date(benthic_data$newdate)
 
 
 ##Import csv file containing cleaned stream conditions data  
-data <- read.csv("Stream Condition Data/2x-weekly Stream Conditions_cleaned_MASTERCSV.csv", na.strings=c("","NA"))
+data <- read.csv("data/Stream Condition Data/2x-weekly Stream Conditions_cleaned_MASTERCSV.csv", na.strings=c("","NA"))
 
 data$newdate <-strptime(as.character(data$Date), "%d/%m/%Y")
 data$newdate <- as.Date(data$newdate)
@@ -114,16 +111,43 @@ benthic_total_abundance_sub <- benthic_total_abundance %>%
   ungroup() %>% 
   filter(!is.na(Abundance_sqrt))
 
-##need to add sqrt transformation beforehand (improves normality better than log transformation)
-seasonal_benthic_plot <- ggplot(benthic_total_abundance_sub, aes(x = Season, y = Abundance_sqrt, fill = Site)) +
+
+##plots
+##no outliers removed, not square root transformed
+seasonal_benthic_plot <- ggplot(benthic_total_abundance, aes(x = Season, y = x, fill = Site)) +
   stat_boxplot() +
   facet_wrap(~Site) +
   theme_classic() +
-  ylab("Abundance (sqrt)") +
+  ylab("Abundance") +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank()) 
   
 seasonal_benthic_plot
+
+##no outliers removed, square root transformed
+seasonal_benthic_plot_sqrt <- ggplot(benthic_total_abundance, aes(x = Season, y = Abundance_sqrt, fill = Site)) +
+  stat_boxplot() +
+  facet_wrap(~Site) +
+  theme_classic() +
+  ylab("Abundance") +
+  scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank()) 
+
+seasonal_benthic_plot_sqrt
+
+##outliers removed, square root transformed
+seasonal_benthic_plot_sqrt_noout <- ggplot(benthic_total_abundance_sub, aes(x = Season, y = Abundance_sqrt, fill = Site)) +
+  stat_boxplot() +
+  facet_wrap(~Site) +
+  theme_classic() +
+  ylab("Abundance (Sqrt)") +
+  scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank()) 
+
+seasonal_benthic_plot_sqrt_noout
+
+##i don't think removing outliers makes sense. there is such a low sample size. we are also not doing any statistics, so does it make any sense to sqrt transform? 
+##The plot looks better, but that can not be reason enough, i don't think it makes sense.. in general this analysis is pretty sketchy
 
 ##to-do:  finish IDing last 4 samples - July 30th and Oct 15 for AT
 
@@ -174,26 +198,49 @@ aqveg_data_subset$Site <- ordered(aqveg_data_subset$Site,
 aqveg_data_subset <- aqveg_data_subset %>%
   mutate(aqveg_total_sqrt = sqrt(aqveg_total)) 
 
-aqveg_data_subset <- aqveg_data_subset %>% 
+aqveg_data_subset_noout <- aqveg_data_subset %>% 
   group_by(Site, Season) %>% 
   mutate(aqveg_total_sqrt = remove_outliers(aqveg_total_sqrt)) %>% 
   ungroup() %>% 
   filter(!is.na(aqveg_total_sqrt))
 
-seasonal_aqveg_plot <- ggplot(aqveg_data_subset, aes(x = Season, y = aqveg_total_sqrt, fill = Site)) +
+##aquatic veg plot, not transformed and no outliers removed
+seasonal_aqveg_plot <- ggplot(aqveg_data_subset, aes(x = Season, y = aqveg_total, fill = Site)) +
+  geom_boxplot() +
+  facet_wrap(~Site) +
+  theme_classic() +
+  ylab("Relative Abundance Score") +
+  scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())
+  
+seasonal_aqveg_plot
+
+##aquatic veg plot, transformed and no outliers removed
+seasonal_aqveg_plot_sqrt <- ggplot(aqveg_data_subset, aes(x = Season, y = aqveg_total_sqrt, fill = Site)) +
+  geom_boxplot() +
+  facet_wrap(~Site) +
+  theme_classic() +
+  ylab("Relative Abundance Score") +
+  scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())
+
+seasonal_aqveg_plot_sqrt
+
+##square root transformed and outliers removed
+seasonal_aqveg_plot_sqrt_noout <- ggplot(aqveg_data_subset_noout, aes(x = Season, y = aqveg_total_sqrt, fill = Site)) +
   geom_boxplot() +
   facet_wrap(~Site) +
   theme_classic() +
   ylab("Relative Abundance Score (sqrt)") +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())
-  
-seasonal_aqveg_plot
 
+seasonal_aqveg_plot_sqrt_noout
 
+##there are no outliers in the algae data -- so makes no difference, not sure square rooting makes sense 
 ###import fish density plot
 
-source("~/Desktop/Seasonal Stream Food Webs/Code/Seasonal FW_Fish Density and Size.R")
+source("code/Seasonal FW_Fish Density and Size.R")
 
 ##Final plot 
 ##Create figure legend for 3 sites 
@@ -268,14 +315,14 @@ summary(benthic_anova)
 
 benthic_tukey <- TukeyHSD(benthic_anova)
 benthic_tukey_table <- benthic_tukey[["Site:Season"]]
-write.csv(benthic_tukey_table, "~/Desktop/Seasonal Stream Food Webs/R output tables/benthic_tukey_table.csv")
+write.csv(benthic_tukey_table, "outputs/benthic_inverts_tukey_table.csv")
 
 aqveg_anova <- aov(aqveg_total_sqrt ~ Site*Season, data = aqveg_data_subset)
 summary(aqveg_anova)
 
 aqveg_tukey <- TukeyHSD(aqveg_anova)
 aqveg_tukey_table <- aqveg_tukey[["Site:Season"]]
-write.csv(aqveg_tukey_table, "~/Desktop/Seasonal Stream Food Webs/R output tables/aqveg_tukey_table.csv")
+write.csv(aqveg_tukey_table, "outputs/aqveg_tukey_table.csv")
 
 
 ##Putting together mean densities --- SEASONAL
@@ -351,9 +398,9 @@ r_c_season_plot <- ggplot(seasonal_r_c_ratio, aes(x = Season, y = R_C, fill = Si
   geom_col(colour = "black") +
   facet_wrap(~Site) +
   theme_classic() +
-  ylab("Mean R:C Ratio") +
+  ylab("Mean Seasonal R:C Ratio") +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),axis.text.y = element_text(size = 12),axis.title.y=element_text(size = 12), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())
 
 r_c_season_plot
 
@@ -362,6 +409,8 @@ biomass_pyramid_seasonal <- ggarrange(fish_density_all_plot, r_c_season_plot, le
                              labels = c("a)", "b)"),
                              ncol = 1, nrow = 2, font.label = list(colour = "black", size = 12, family = "Times New Roman"))
 biomass_pyramid_seasonal
+
+##so i think it makes the most sense to use not transformed and no outlier removed, as not doing statistics so transformation does not make sense... and not enough samples to make outliers legit.. 
 
 
 ##Mean annual R:C ratio  
@@ -393,7 +442,7 @@ annual_r_c_plot <- ggplot(annual_r_c_ratio, aes(x = Site, y = R_C, fill = Site))
   geom_bar(stat = "identity", colour = "black") +
   theme_classic() +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),axis.text.y = element_text(size = 12),axis.title.y=element_text(size = 12), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())+
   ylab("Mean R:C Ratio")
 annual_r_c_plot
 
@@ -438,7 +487,7 @@ mean_fish_plot <- ggplot(annual_mean_abundance, aes(x = Site, y = Fish, fill = S
   geom_bar(stat = "identity", colour = "black") +
   theme_classic() +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9")) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 10), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),axis.text.y = element_text(size = 12),axis.title.y=element_text(size = 12), axis.title.x = element_blank(), legend.position = "none", text = element_text(family = "Times New Roman"), strip.background = element_blank(),strip.text = element_blank())+
   ylab("Mean Abundance")
 mean_fish_plot
 
@@ -447,9 +496,37 @@ biomass_pyramid <- ggarrange(mean_fish_plot, annual_r_c_plot, legend = "none",
                              ncol = 1, nrow = 2, font.label = list(colour = "black", size = 12, family = "Times New Roman"))
 biomass_pyramid
 
+##Joining seasonal and annual mean R:C figs together
+##create figure legend
+library(ggpubr)
+data <- data.frame(
+  Xdata = rnorm(3),
+  Ydata = rnorm(3),
+  LegendData = c("Low Impact", "Mid Impact", "High Impact")
+)
+data$LegendData <- factor(data$LegendData, levels = c("Low Impact", "Mid Impact", "High Impact"))
+gplot <- ggplot(data, aes(Xdata, fill = LegendData)) +
+  geom_bar(colour = "black") +
+  scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9"))+
+  theme_classic()+
+  guides(colour = guide_legend(title = "Site")) +
+  theme(legend.title = element_text(family = "Times New Roman"), legend.text = element_text(size = 12, family = "Times New Roman"), legend.position = "bottom")+
+  guides(fill = guide_legend(title="Site"))
+gplot
 
+leg_fig <- get_legend(gplot)
+
+
+biomass_pyramid_seasonal_annual <- ggarrange(fish_density_all_plot, mean_fish_plot, r_c_season_plot, annual_r_c_plot, legend = "bottom", common.legend = TRUE, legend.grob = leg_fig,
+                                             labels = c("a)", "b)", "c)", "d)"),
+                                             ncol = 2, nrow = 2, font.label = list(colour = "black", size = 12, family = "Times New Roman"))
+
+
+biomass_pyramid_seasonal_annual
+
+###NOT USING ------------------------
 #####R:C ratio -- seasonal and annual -- using transformed and outlier removed data, not sure which is correct? first want to see how it is different
-##CURRENTLY USING THIS FOR MS
+
 ##Putting together mean densities --- SEASONAL
 seasonal_benthic_abundance_mean <- benthic_total_abundance_sub %>%
   group_by(Site, Season) %>%
