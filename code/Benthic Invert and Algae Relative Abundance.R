@@ -550,6 +550,8 @@ names(seasonal_mean_abundance)[5] <- "Fish"
 seasonal_r_c_ratio <- seasonal_mean_abundance %>%
   mutate(R_C = Aquatic_Vegetation/Benthic_Inverts)
 
+3.7/0.16556
+
 r_c_season_plot <- ggplot(seasonal_r_c_ratio, aes(x = Season, y = R_C, fill = Site)) +
   geom_col(colour = "black") +
   facet_wrap(~Site) +

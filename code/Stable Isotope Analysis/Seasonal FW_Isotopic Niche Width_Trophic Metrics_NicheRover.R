@@ -24,8 +24,8 @@ seasonal_df_split_pred_tp_bound_noout <- seasonal_df_split_pred_tp_bound_noout%>
     startsWith(Sample_ID, "AT3") ~ "AT_fall"
   ) )
 
-data <- seasonal_df_split_pred_tp_bound %>%
-  select(Group, TC_pred_logit, TP_pred) ####Note: this data includes outliers, different assumptions for niche analysis vs. ANOVA -- if want to remove outliers, use the noout df 
+data <- seasonal_df_split_pred_tp_bound_noout %>%
+  select(Group, TC_pred_logit, TP_pred) ####Note: have used data w/ outliers removed and logit transformed % TC
 
 typeof(data$TC_pred_logit)
 typeof(data$TP_pred)
@@ -235,3 +235,20 @@ ellipse.plot <- first.plot +
 
 ellipse.plot
 
+##calculate size and SE of niche area 
+# posterior distribution of (mu, Sigma) for each species
+nsamples <- 1000
+fish.par <- tapply(1:nrow(fish), fish$species,
+                   function(ii) niw.post(nsamples = nsamples, X = fish[ii,2:4]))
+
+# posterior distribution of niche size by species
+fish.size <- sapply(fish.par, function(spec) {
+  apply(spec$Sigma, 3, niche.size, alpha = .95)
+})
+
+# point estimate and standard error
+rbind(est = colMeans(fish.size),
+      se = apply(fish.size, 2, sd))
+
+##then try and correct SEA for SEAc -- see if any different, and if possible to use SEAc for overlap? 
+##or try using overlap again in siber... 

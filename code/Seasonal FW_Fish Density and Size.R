@@ -28,12 +28,14 @@ fish_density_sp <- aggregate(Number_of_Individuals ~ Season + Site + Species, fi
 
 fish_density_all <- aggregate(Number_of_Individuals ~ Season + Site, fish_meta, sum)
 
-hc_fall <- fish_meta %>%
-  filter(Season == "Fall") %>%
-  filter(Site == "Hawk Cliff") %>%
-  summarise(vars(Number_of_Individuals), sum)
+##maximum change in fish density
+##low impact - spring to summer
+hc_max_diff <- 144/36
+##mid impact - spring to summer
+ep_max_diff <- 472/27
+##high impact -- spring to fall
+at_max_diff <- 323/6
 
-aggregate(hc_fall$Number_of_Individuals, sum)
 
 fish_density_all <- fish_density_all %>%
   mutate(Site_Code = case_when(
