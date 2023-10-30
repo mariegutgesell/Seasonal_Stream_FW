@@ -108,24 +108,28 @@ over.stat <- overlap(fish.par, nreps = nsamples, nprob = 1e4, alpha = .95)
 overlap.plot(over.stat, col = clrs, mean.cred.col = "turquoise", equal.axis = TRUE,
              xlab = "Overlap Probability (%) -- Niche Region Size: 95%")
 
+##Determining size distribution of niche
 # posterior distribution of (mu, Sigma) for each site*season
 nsamples <- 10000
 fish.par <- tapply(1:nrow(data), data$Group,
                    function(ii) niw.post(nsamples = nsamples, X = data[ii,2:3]))
 
 # posterior distribution of niche size by species
-p.ell <- pchisq(1,2)
+p.ell <- pchisq(1,2) ##SEA 
+p.ell2 <- 0.40 ##slightly larger mean niche area, which makes sense
 
 fish.size <- sapply(fish.par, function(spec) {
   apply(spec$Sigma, 3, niche.size, alpha = p.ell)
 })
 
-
-
+##have estimate of 10000 SEA for each site-season
+##I guess could do SEAc calculation for each of these estimates, and get an estimate of SEAc.. 
 # point estimate and standard error
 rbind(est = colMeans(fish.size),
       se = apply(fish.size, 2, sd))
 
+##mean SEA is smaller than SEA from SIBER -- this does incorporate uncertainty already
+##SEA equation: SEAc = SEA x [(n-1)/(n-2)]
 
 dev.off()
 
@@ -235,20 +239,7 @@ ellipse.plot <- first.plot +
 
 ellipse.plot
 
-##calculate size and SE of niche area 
-# posterior distribution of (mu, Sigma) for each species
-nsamples <- 1000
-fish.par <- tapply(1:nrow(fish), fish$species,
-                   function(ii) niw.post(nsamples = nsamples, X = fish[ii,2:4]))
-
-# posterior distribution of niche size by species
-fish.size <- sapply(fish.par, function(spec) {
-  apply(spec$Sigma, 3, niche.size, alpha = .95)
-})
-
-# point estimate and standard error
-rbind(est = colMeans(fish.size),
-      se = apply(fish.size, 2, sd))
+##whether using pchisq(1,2) or p = 0.40 essentially the same just p 0.40 is slightly larger, because pchisq(1,2) = ~0.393
 
 ##then try and correct SEA for SEAc -- see if any different, and if possible to use SEAc for overlap? 
 ##or try using overlap again in siber... 

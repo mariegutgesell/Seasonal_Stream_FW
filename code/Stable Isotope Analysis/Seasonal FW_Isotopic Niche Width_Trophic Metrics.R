@@ -203,13 +203,14 @@ points(1:ncol(SEA.B), group.ML[3,], col="red", pch = "x", lwd = 2)
 ##https://cran.r-project.org/web/packages/SIBER/vignettes/siber-comparing-populations.html
 ##When p = NULL, this uses area of SEA, how do i change it so it is area of SEAc? 
 ##HawkCliff
-##overlap between the SEAc of groups 1.2 and 1.3
+##overlap between the SEAc of groups 1.2 and 1.3 (summer-fall)
 overlap.G1.2.G1.3 <- maxLikOverlap("1.2", "1.3", siber_cc_object, p = NULL, n =)
 print(overlap.G1.2.G1.3)
-##overlap between the SEAc of groups 1.1 and 1.3
+##this seems to give the area of overlap for the SEAc.. area of 1 and 2 slightly off after third decimal place but looks closest to SEAc
+##overlap between the SEAc of groups 1.1 and 1.3 (spring-fall)
 overlap.G1.1.G1.3 <- maxLikOverlap("1.1", "1.3", siber_cc_object, p = NULL, n =)
 print(overlap.G1.1.G1.3)
-##overlap between the SEAc of groups 1.1 and 1.2
+##overlap between the SEAc of groups 1.1 and 1.2 (spring-summer)
 overlap.G1.1.G1.2 <- maxLikOverlap("1.1", "1.2", siber_cc_object, p = NULL, n =)
 print(overlap.G1.1.G1.2)
 
