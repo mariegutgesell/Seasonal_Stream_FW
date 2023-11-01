@@ -117,24 +117,30 @@ fish.par <- tapply(1:nrow(data), data$Group,
 # posterior distribution of niche size by species
 p.ell <- pchisq(1,2) ##SEA 
 p.ell2 <- 0.40 ##slightly larger mean niche area, which makes sense
-
+p.ell3 <- 0.95
 fish.size <- sapply(fish.par, function(spec) {
-  apply(spec$Sigma, 3, niche.size, alpha = p.ell)
+  apply(spec$Sigma, 3, niche.size, alpha = p.ell3)
 })
 
+hist(fish.size$value)
+
+fish.size2 <- sapply(fish.par, function(spec) {
+  apply(spec$Sigma, 3, niche.size, alpha = p.ell3)
+})
 ##have estimate of 10000 SEA for each site-season
 ##I guess could do SEAc calculation for each of these estimates, and get an estimate of SEAc.. 
 # point estimate and standard error
 rbind(est = colMeans(fish.size),
       se = apply(fish.size, 2, sd))
 
+hist(fish.size$value)
 ##mean SEA is smaller than SEA from SIBER -- this does incorporate uncertainty already
 ##SEA equation: SEAc = SEA x [(n-1)/(n-2)]
 
 dev.off()
 
 boxplot(fish.size, col = clrs,
-        ylab = "Niche Size (SEA)", xlab = "Group")
+        ylab = "95% Niche Area", xlab = "Group")
 
 ##Set up fish.size dataframe to format figure for manuscript
 fish.size <- as.data.frame(fish.size)
@@ -170,7 +176,7 @@ SEA_plot <- ggplot(fish.size, aes(x = Season, y = value, fill = Site)) +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9"))  +
   theme_classic() +
   theme(axis.text.x = element_text(size = 12),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 12), axis.title.x = element_blank(), legend.position = "right", text = element_text(family = "Times New Roman")) +
-  ylab("SEA") 
+  ylab("95% Niche") 
   
 SEA_plot
 ##Looking at overlap of of 3 seasons of each site separately 
@@ -180,7 +186,7 @@ SEA_plot_mean <- ggplot(fish.size, aes(x = Site, y = value, fill = Site)) +
   scale_fill_manual(values = c("#999999", "#E69F00", "#56B4E9"))  +
   theme_classic() +
   theme(axis.text.x = element_text(size = 12),axis.text.y = element_text(size = 10),axis.title.y=element_text(size = 12), axis.title.x = element_blank(), legend.position = "right", text = element_text(family = "Times New Roman")) +
-  ylab("SEA") 
+  ylab("95% Niche") 
 
 SEA_plot_mean
 
