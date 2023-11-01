@@ -63,6 +63,63 @@ seasonal_df_split_pred_tp_bound$Season <- ordered(seasonal_df_split_pred_tp_boun
                               levels = c("Spring", "Summer", "Fall"))
 
 ##TESTING ANOVA ASSUMPTIONS -----------------
+##testing normality of TP & % TC for use in ANOVA and isotopic niche analysis
+library(car)
+library(rstatix)
+
+seasonal_df_split_pred_tp_bound %>%
+  group_by(Site, Season) %>%
+  shapiro_test(TC_pred)
+
+seasonal_df_split_pred_tp_bound %>%
+  group_by(Site, Season) %>%
+  shapiro_test(TP_pred) ##only Perl_4 spring is not normal -- p = 0.008
+
+
+#ggqqplot(seasonal_df_split_pred_tp_bound$TC_pred)
+hist(seasonal_df_split_pred_tp_bound$TC_pred)
+#ggqqplot(seasonal_df_split_pred_tp_bound$TP_pred)
+hist(seasonal_df_split_pred_tp_bound$TP_pred)
+
+seasonal_df_split_pred_tp_bound <- seasonal_df_split_pred_tp_bound %>%
+  mutate(TC_pred_log = log(TC_pred)) %>%
+  mutate(TP_pred_log = log(TP_pred)) %>%
+  mutate(TC_pred_logit = logit(TC_pred)) %>% ##logit transformation appropriate for percentages/proportions
+  mutate(TC_pred_qlogis = qlogis(TC_pred)) %>%
+  mutate(TP_pred_sqrt = sqrt(TP_pred))
+
+hist(seasonal_df_split_pred_tp_bound$TP_pred_sqrt)
+hist(seasonal_df_split_pred_tp_bound$TP_pred_log)
+hist(seasonal_df_split_pred_tp_bound$TC_pred_logit)
+
+
+
+##this is equivalent to the logit transformation
+
+seasonal_df_split_pred_tp_bound %>%
+  group_by(Site, Season) %>%
+  shapiro_test(TC_pred_logit) ##does improve normality, only 2 sites non-normal hc spring and perl 4 fall
+
+seasonal_df_split_pred_tp_bound %>%
+  group_by(Site, Season) %>%
+  shapiro_test(TP_pred_log) ###improves normality of EP4 spring -- almost normal (p = 0.04)
+
+
+sd <- seasonal_df_split_pred_tp_bound %>%
+  group_by(Site, Season) %>%
+  summarise_each(funs(sd)) ##have different variances, but doesn't look like transformations improve it...
+
+##Normality results: using logit transformed % coupling and not transformed TP 
+
+##Testing for homogeneity of variance 
+library(car)
+leveneTest(TC_pred_logit ~ Site,data = seasonal_df_split_pred_tp_bound)
+leveneTest(TP_pred ~ Site,data = seasonal_df_split_pred_tp_bound)
+leveneTest(TP_pred_sqrt ~ Site,data = seasonal_df_split_pred_tp_bound)
+
+qqPlot(seasonal_df_split_pred_tp_bound$TC_pred_logit)
+qqPlot(seasonal_df_split_pred_tp_bound$TP_pred)
+
 ##Function to remove outliers
 ##removing outliers
 #' Replace outliers
@@ -103,37 +160,7 @@ seasonal_df_split_pred_tp_bound_noout <- seasonal_df_split_pred_tp_bound_noout%>
 
 seasonal_df_split_pred_tp_bound_noout$Site_Type <- ordered(seasonal_df_split_pred_tp_bound_noout$Site_Type, 
                                                            levels = c("Low Impact", "Mid Impact", "High Impact"))
-##testing normality of TP & % TC for use in ANOVA and isotopic niche analysis
-library(car)
-library(rstatix)
 
-seasonal_df_split_pred_tp_bound %>%
-  group_by(Site, Season) %>%
-  shapiro_test(TC_pred)
-
-seasonal_df_split_pred_tp_bound %>%
-  group_by(Site, Season) %>%
-  shapiro_test(TP_pred) ##only Perl_4 spring is not normal -- p = 0.008
-
-
-#ggqqplot(seasonal_df_split_pred_tp_bound$TC_pred)
-hist(seasonal_df_split_pred_tp_bound_noout$TC_pred)
-#ggqqplot(seasonal_df_split_pred_tp_bound$TP_pred)
-hist(seasonal_df_split_pred_tp_bound_noout$TP_pred)
-
-
-
-
-seasonal_df_split_pred_tp_bound <- seasonal_df_split_pred_tp_bound %>%
-  mutate(TC_pred_log = log(TC_pred)) %>%
-  mutate(TP_pred_log = log(TP_pred)) %>%
-  mutate(TC_pred_logit = logit(TC_pred)) %>% ##logit transformation appropriate for percentages/proportions
-  mutate(TC_pred_qlogis = qlogis(TC_pred)) %>%
-  mutate(TP_pred_sqrt = sqrt(TP_pred))
-
-hist(seasonal_df_split_pred_tp_bound_noout$TP_pred_sqrt)
-hist(seasonal_df_split_pred_tp_bound_noout$TP_pred_log)
-hist(seasonal_df_split_pred_tp_bound_noout$TC_pred_logit)
 
 ##trying to scale
 seasonal_df_split_pred_tp_bound_noout$TC_pred_logit_scaled <- scale(seasonal_df_split_pred_tp_bound_noout$TC_pred_logit, center = TRUE, scale = TRUE)
@@ -142,34 +169,8 @@ seasonal_df_split_pred_tp_bound_noout$TP_pred_scaled <- scale(seasonal_df_split_
 
 hist(seasonal_df_split_pred_tp_bound_noout$TC_pred_logit_scaled)
 hist(seasonal_df_split_pred_tp_bound_noout$TP_pred_scaled)
-##this is equivalent to the logit transformation
 
-seasonal_df_split_pred_tp_bound %>%
-  group_by(Site, Season) %>%
-  shapiro_test(TC_pred_logit) ##does improve normality, only 2 sites non-normal hc spring and perl 4 fall
-
-seasonal_df_split_pred_tp_bound %>%
-  group_by(Site, Season) %>%
-  shapiro_test(TP_pred_log) ###improves normality of EP4 spring -- almost normal (p = 0.04)
-
-
-sd <- seasonal_df_split_pred_tp_bound %>%
-  group_by(Site, Season) %>%
-  summarise_each(funs(sd)) ##have different variances, but doesn't look like transformations improve it...
-
-##Normality results: using logit transformed % coupling and not transformed TP 
-
-##Testing for homogeneity of variance 
-library(car)
-leveneTest(TC_pred_logit ~ Site,data = seasonal_df_split_pred_tp_bound)
-leveneTest(TP_pred ~ Site,data = seasonal_df_split_pred_tp_bound)
-leveneTest(TP_pred_sqrt ~ Site,data = seasonal_df_split_pred_tp_bound)
-
-qqPlot(seasonal_df_split_pred_tp_bound$TC_pred_logit)
-qqPlot(seasonal_df_split_pred_tp_bound$TP_pred)
-
-
-
+##Plotting results
 
 mean_trophic_metrics <- seasonal_df_split_pred_tp_bound_noout %>%
   group_by(Site, Season) %>%
